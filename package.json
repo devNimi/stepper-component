@@ -10,6 +10,10 @@
   },
   "author": "Nimesh Jain",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devNimi/react-stepper"
+  },
   "peerDependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
