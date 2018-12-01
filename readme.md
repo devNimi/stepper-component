@@ -14,8 +14,9 @@ import Stepper from 'stepper-component'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Stepper/>
+      <div>
+        <Stepper steps={4} 
+			currentStep={3}/>
       </div>
     );
   }

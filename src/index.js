@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Flex, Image, Box } from "rebass";
 import styled, { keyframes } from "styled-components";
 
-import ic_done from "./ic_done.svg";
+// import ic_done from "./ic_done.svg"; Add svg supports
 import Colors from "./Colors";
 
 const StepperContainer = styled(Flex)`
@@ -73,7 +73,8 @@ const GreenLine = styled(Line)`
 
 const StepRound = ({ active, done, size }) =>
   done ? (
-    <RoundImage src={ic_done} size={size} />
+    <RoundImage src={`data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMS45OTkgNTExLjk5OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTExLjk5OSA1MTEuOTk5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxnPjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNi4yMzEsNzUuNTA4Yy03LjY4OS03LjY5LTIwLjE1OC03LjY5LTI3Ljg0OSwwbC0zMTkuMjEsMzE5LjIxMUwzMy42MTcsMjY5LjE2M2MtNy42ODktNy42OTEtMjAuMTU4LTcuNjkxLTI3Ljg0OSwwICAgIGMtNy42OSw3LjY5LTcuNjksMjAuMTU4LDAsMjcuODQ5bDEzOS40ODEsMTM5LjQ4MWM3LjY4Nyw3LjY4NywyMC4xNiw3LjY4OSwyNy44NDksMGwzMzMuMTMzLTMzMy4xMzYgICAgQzUxMy45MjEsOTUuNjY2LDUxMy45MjEsODMuMTk4LDUwNi4yMzEsNzUuNTA4eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=`} size={size} />
   ) : (
     <RoundIcon active={active} size={size} />
   );
