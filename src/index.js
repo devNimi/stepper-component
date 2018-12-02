@@ -3,7 +3,10 @@ import { Flex, Image, Box } from "rebass";
 import styled, { keyframes } from "styled-components";
 
 // import ic_done from "./ic_done.svg"; Add svg supports
-import Colors from "./Colors";
+const Colors = {
+  MAIN_CONTAINER_BG: "#FAFAFA",
+  GREEN: "#4DC3B6",
+};
 
 const StepperContainer = styled(Flex)`
   align-items: center;

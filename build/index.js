@@ -5325,14 +5325,6 @@ var _styledComponents = __webpack_require__(7);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _ic_done = __webpack_require__(103);
-
-var _ic_done2 = _interopRequireDefault(_ic_done);
-
-var _Colors = __webpack_require__(104);
-
-var _Colors2 = _interopRequireDefault(_Colors);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -5342,6 +5334,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+// import ic_done from "./ic_done.svg"; Add svg supports
+var Colors = {
+  MAIN_CONTAINER_BG: "#FAFAFA",
+  GREEN: "#4DC3B6"
+};
 
 var StepperContainer = (0, _styledComponents2.default)(_rebass.Flex)(_templateObject, function (_ref) {
   var px = _ref.px,
@@ -5361,7 +5359,7 @@ var RoundImage = (0, _styledComponents2.default)(_rebass.Image)(_templateObject2
 }, function (_ref5) {
   var size = _ref5.size;
   return size;
-}, _Colors2.default.GREEN, _Colors2.default.GREEN, function (_ref6) {
+}, Colors.GREEN, Colors.GREEN, function (_ref6) {
   var size = _ref6.size;
   return size;
 });
@@ -5376,7 +5374,7 @@ var RoundIcon = _styledComponents2.default.div(_templateObject4, function (_ref7
   return size;
 }, function (_ref9) {
   var active = _ref9.active;
-  return active ? "\n        animation-delay: 1s;\n        box-shadow: 0px 0px 0px 6px " + _Colors2.default.GREEN + " inset;\n        border: 2px solid " + _Colors2.default.GREEN + ";\n        transition: box-shadow 1s;\n        transition: border 1s;\n        " : "\n        border: 2px solid #ccc;\n        background-color:#fff;\n      ";
+  return active ? "\n        animation-delay: 1s;\n        box-shadow: 0px 0px 0px 6px " + Colors.GREEN + " inset;\n        border: 2px solid " + Colors.GREEN + ";\n        transition: box-shadow 1s;\n        transition: border 1s;\n        " : "\n        border: 2px solid #ccc;\n        background-color:#fff;\n      ";
 });
 
 var lineFillAnim = (0, _styledComponents.keyframes)(_templateObject5);
@@ -5390,7 +5388,7 @@ var GreyLine = (0, _styledComponents2.default)(Line)(_templateObject7, function 
   return width;
 });
 
-var GreenLine = (0, _styledComponents2.default)(Line)(_templateObject8, _Colors2.default.GREEN, lineFillAnim, function (_ref11) {
+var GreenLine = (0, _styledComponents2.default)(Line)(_templateObject8, Colors.GREEN, lineFillAnim, function (_ref11) {
   var width = _ref11.width;
   return width;
 });
@@ -5399,7 +5397,7 @@ var StepRound = function StepRound(_ref12) {
   var active = _ref12.active,
       done = _ref12.done,
       size = _ref12.size;
-  return done ? _react2.default.createElement(RoundImage, { src: _ic_done2.default, size: size }) : _react2.default.createElement(RoundIcon, { active: active, size: size });
+  return done ? _react2.default.createElement(RoundImage, { src: "data:image/svg+xml;base64,\nPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMS45OTkgNTExLjk5OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTExLjk5OSA1MTEuOTk5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxnPjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNi4yMzEsNzUuNTA4Yy03LjY4OS03LjY5LTIwLjE1OC03LjY5LTI3Ljg0OSwwbC0zMTkuMjEsMzE5LjIxMUwzMy42MTcsMjY5LjE2M2MtNy42ODktNy42OTEtMjAuMTU4LTcuNjkxLTI3Ljg0OSwwICAgIGMtNy42OSw3LjY5LTcuNjksMjAuMTU4LDAsMjcuODQ5bDEzOS40ODEsMTM5LjQ4MWM3LjY4Nyw3LjY4NywyMC4xNiw3LjY4OSwyNy44NDksMGwzMzMuMTMzLTMzMy4xMzYgICAgQzUxMy45MjEsOTUuNjY2LDUxMy45MjEsODMuMTk4LDUwNi4yMzEsNzUuNTA4eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=", size: size }) : _react2.default.createElement(RoundIcon, { active: active, size: size });
 };
 
 var StepLine = function StepLine(_ref13) {
@@ -33328,30 +33326,6 @@ var Hide = exports.Hide = withHidden((0, _components2.default)({
 Hide.displayName = 'Hide';
 
 exports.default = Hide;
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "a56602f1e611e3ae01241b4446cc0cd1.svg";
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var Colors = {
-  MAIN_CONTAINER_BG: "#FAFAFA",
-  PINK_1: "#bb4ea1",
-  GREEN: "#4DC3B6"
-};
-
-exports.default = Colors;
 
 /***/ })
 /******/ ]);
